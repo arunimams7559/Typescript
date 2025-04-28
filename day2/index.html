@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member Management</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="user-container">
+        <h1>Children's Hub</h1>
+        <form id="userForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <select id="status">
+                <option value="" disabled selected>Select Your Status</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+                <option value="Pending">Pending</option>
+            </select>
+            <input type="text" id="hobby" placeholder="Hobby (optional)">
+            <button type="submit">Add</button>
+        </form>
+        <h2>Members</h2>
+        <ul id="userList"></ul>
+        <!-- <button id="delete-btn">Delete</button> -->
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

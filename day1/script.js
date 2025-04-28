@@ -3,7 +3,7 @@ var number2 = document.getElementById("num2");
 var addBtn = document.getElementById("addBtn");
 var subBtn = document.getElementById("subBtn");
 var mulBtn = document.getElementById("mulBtn");
-var divBtn = document.getElementById("divBtn"); // Added division button
+var divBtn = document.getElementById("divBtn");
 var printResult = document.getElementById("result");
 function addNumbers() {
     var first = parseFloat(number1.value);
@@ -14,7 +14,7 @@ function addNumbers() {
         return;
     }
     var result = first + second;
-    printResult.textContent = "The result is: ".concat(result); // Fixed template literal
+    printResult.textContent = "The result is: ".concat(result);
 }
 function substractnumbers() {
     var first = parseFloat(number1.value);
@@ -25,7 +25,7 @@ function substractnumbers() {
         return;
     }
     var result = first - second;
-    printResult.textContent = "The result is: ".concat(result); // Used template literal for consistency
+    printResult.textContent = "The result is: ".concat(result);
 }
 function multiplyNumbers() {
     var first = parseFloat(number1.value);
@@ -35,7 +35,7 @@ function multiplyNumbers() {
         return;
     }
     var result = first * second;
-    printResult.textContent = "The result is: ".concat(result); // Used template literal for consistency
+    printResult.textContent = "The result is: ".concat(result);
 }
 function divideNumbers() {
     var first = parseFloat(number1.value);
@@ -57,4 +57,4 @@ function divideNumbers() {
 addBtn.addEventListener("click", addNumbers);
 subBtn.addEventListener("click", substractnumbers);
 mulBtn.addEventListener("click", multiplyNumbers);
-divBtn.addEventListener("click", divideNumbers); // Added event listener for division button
+divBtn.addEventListener("click", divideNumbers);

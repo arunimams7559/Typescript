@@ -3,7 +3,7 @@ const number2 = document.getElementById("num2") as HTMLInputElement;
 const addBtn = document.getElementById("addBtn") as HTMLButtonElement;
 const subBtn = document.getElementById("subBtn") as HTMLButtonElement;
 const mulBtn = document.getElementById("mulBtn") as HTMLButtonElement; 
-const divBtn = document.getElementById("divBtn") as HTMLButtonElement; // Added division button
+const divBtn = document.getElementById("divBtn") as HTMLButtonElement; 
 const printResult = document.getElementById("result") as HTMLHeadingElement;
 
 function addNumbers(): void {
@@ -17,7 +17,7 @@ function addNumbers(): void {
   }
 
   const result = first + second;
-  printResult.textContent = `The result is: ${result}`; // Fixed template literal
+  printResult.textContent = `The result is: ${result}`; 
 }
 
 function substractnumbers(): void {
@@ -31,7 +31,7 @@ function substractnumbers(): void {
   }
 
   const result = first - second;
-  printResult.textContent = `The result is: ${result}`; // Used template literal for consistency
+  printResult.textContent = `The result is: ${result}`;
 }
 function multiplyNumbers(): void {
   const first = parseFloat(number1.value);
@@ -41,7 +41,7 @@ function multiplyNumbers(): void {
     return;
   }
   const result = first * second;
-  printResult.textContent = `The result is: ${result}`; // Used template literal for consistency
+  printResult.textContent = `The result is: ${result}`; 
   }
 
   function divideNumbers(): void {
@@ -68,4 +68,4 @@ function multiplyNumbers(): void {
 addBtn.addEventListener("click", addNumbers);
 subBtn.addEventListener("click", substractnumbers);
 mulBtn.addEventListener("click", multiplyNumbers); 
-divBtn.addEventListener("click", divideNumbers); // Added event listener for division button
+divBtn.addEventListener("click", divideNumbers);
