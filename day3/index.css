@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.pexels.com/photos/7550886/pexels-photo-7550886.jpeg?auto=compress&cs=tinysrgb&w=600');
+    margin: 0;
+    padding: 0;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 35px auto;
+    background: rgb(247, 244, 245);
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #9e474d;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  form input, form textarea, form select, form button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #9e474d;
+  }
+  
+  form textarea {
+    resize: none;
+    height: 80px;
+  }
+  
+  form button {
+    background-color: #9e474d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+   
+  }
+  
+  
+  #task-list {
+    margin-top: 20px;
+  }
+  
+  .task-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-card h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #0f0f0f;
+  }
+  
+  .task-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #372d2d;
+  }
+  
+  .task-card button {
+    background-color: #da7781;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    
+  }
+  
+  .task-card button:hover {
+    background-color: #d7757f;
+  }
