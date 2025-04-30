@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Sales Tracker</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Auto Deals</h1>
+
+    <div class="form-section">
+      <input type="text" id="car-model" placeholder="Enter Car Model" />
+      <input type="number" id="car-cost" placeholder="Enter Car Cost" />
+      <button id="add-car-btn">Add Car</button>
+    </div>
+
+    <table id="car-table">
+      <thead>
+        <tr>
+          <th>Car Model</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+
+    <div class="total-cost">
+      <button id="calculate-btn">Calculate Total Cost</button>
+      <p>Total Cost: ₹<span id="total-cost">0</span></p>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,45 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task Management App</title>
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Task Management App</h1>
-    <form id="task-form">
-      <h2>Add New Task</h2>
-      <input type="text" id="title" placeholder="Task Title" required />
-      <textarea id="description" placeholder="Task Description" required></textarea>
-      <input type="date" id="dueDate" placeholder="Due Date (Optional)" />
-      <select id="priority" required>
-        <option value="" disabled selected>Select Your Priority</option>
-      
-        <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
-        <option value="High">High</option>
-      </select>
-      <button type="submit">Add Task</button>
-    </form>
-    <h2>Task List</h2>
-    <div id="task-list"></div>
-  </div>
-  <script src="script.js" ></script>
-</body>
-</html>
 
-
-
-
-interface Car {
+interface Vehicle {
   model: string;
   cost: number;
+
+  //  display vehicle details
+  displayDetails(): void;
 }
 
+
+class Car implements Vehicle {
+  model: string;
+  cost: number;
+
+  constructor(model: string, cost: number) {
+    this.model = model;
+    this.cost = cost;
+  }
+
+  // Implementing the displayDetails method from the Vehicle interface
+  displayDetails(): void {
+    console.log(`Car Model: ${this.model}, Cost: ${this.cost}`);
+  }
+}
+
+// CarDeal class as the dealer
 class CarDeal {
-  public name: string; 
+  public name: string;
 
   constructor(name: string) {
     this.name = name;
@@ -47,15 +33,11 @@ class CarDeal {
 }
 
 class SalesManage extends CarDeal {
-  // protected position: string; 
-
-  constructor(name: string, position?: string) {
-    super(name);
-    // this.position = position;
+  constructor(name: string) {
+    super(name); 
   }
 
-  public calculateTotalCost(cars: Car[]): number {
-  
+  public calculateTotalCost(cars: Vehicle[]): number {
     return cars.reduce((sum, car) => sum + car.cost, 0);
   }
 }
@@ -68,12 +50,11 @@ const carTableBody = document.querySelector("#car-table tbody")!;
 const calculateBtn = document.getElementById("calculate-btn")!;
 const totalCostEl = document.getElementById("total-cost")!;
 
+const cars: Vehicle[] = []; 
 
-const cars: Car[] = [];
-
-// Function to render the table
-function renderTable(cars: Car[]): void {
-  carTableBody.innerHTML = ""; // Clear the table before rendering
+// Function to render the table with car details
+function renderTable(cars: Vehicle[]): void {
+  carTableBody.innerHTML = ""; 
   cars.forEach((car) => {
     const row = document.createElement("tr");
 
@@ -89,30 +70,32 @@ function renderTable(cars: Car[]): void {
   });
 }
 
-
+// Event listener for adding a new car
 addCarBtn.addEventListener("click", (): void => {
   const model = carModelInput.value.trim();
   const cost = parseFloat(carCostInput.value);
 
-  // Validate input
+
   if (!model || isNaN(cost) || cost <= 0) {
     alert("Please enter a valid car model and cost.");
     return;
   }
 
- 
-  cars.push({ model, cost });
+  // Create a new Car object and add to cars array
+  const newCar = new Car(model, cost);
+  cars.push(newCar);
 
-  // Clear input fields
+
   carModelInput.value = "";
   carCostInput.value = "";
+
 
   renderTable(cars);
 });
 
 // Event listener for calculating the total cost
 calculateBtn.addEventListener("click", (): void => {
-  const salesManage = new SalesManage(""); 
+  const salesManage = new SalesManage("ABC Branch");
   const totalCost = salesManage.calculateTotalCost(cars);
   totalCostEl.textContent = totalCost.toString(); // Update the total cost in the DOM
 });

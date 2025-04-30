@@ -37,7 +37,7 @@ document.getElementById("userForm")?.addEventListener("submit", event => {
     const nameInput = document.getElementById("name") as HTMLInputElement;
     const name = nameInput.value.trim();
     const age = parseInt((document.getElementById("age") as HTMLInputElement).value);
-    const status = Status[(document.getElementById("status") as HTMLSelectElement).value as keyof typeof Status];
+    const status = Status[(document.getElementById("status") as HTMLSelectElement).value];
     const hobby = (document.getElementById("hobby") as HTMLInputElement).value.trim() || undefined;
 
    
