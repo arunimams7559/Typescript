@@ -3,8 +3,8 @@ interface Vehicle {
   model: string;
   cost: number;
 
-  //  display vehicle details
-  displayDetails(): void;
+  // //  display vehicle details
+  // displayDetails(): void;
 }
 
 
@@ -13,17 +13,17 @@ class Car implements Vehicle {
   cost: number;
 
   constructor(model: string, cost: number) {
-    this.model = model;
+    this.model = model;//converts the vehicle model to car class
     this.cost = cost;
   }
 
-  // Implementing the displayDetails method from the Vehicle interface
-  displayDetails(): void {
-    console.log(`Car Model: ${this.model}, Cost: ${this.cost}`);
-  }
+  // // Implementing the displayDetails method from the Vehicle interface
+  // displayDetails(): void {
+  //   console.log(`Car Model: ${this.model}, Cost: ${this.cost}`);
+  // }
 }
 
-// CarDeal class as the dealer
+
 class CarDeal {
   public name: string;
 
@@ -34,7 +34,7 @@ class CarDeal {
 
 class SalesManage extends CarDeal {
   constructor(name: string) {
-    super(name); 
+    super(name); //cardeal
   }
 
   public calculateTotalCost(cars: Vehicle[]): number {
@@ -42,7 +42,6 @@ class SalesManage extends CarDeal {
   }
 }
 
-// DOM Elements
 const carModelInput = document.getElementById("car-model") as HTMLInputElement;
 const carCostInput = document.getElementById("car-cost") as HTMLInputElement;
 const addCarBtn = document.getElementById("add-car-btn")!;
@@ -70,7 +69,7 @@ function renderTable(cars: Vehicle[]): void {
   });
 }
 
-// Event listener for adding a new car
+//  adding a new car
 addCarBtn.addEventListener("click", (): void => {
   const model = carModelInput.value.trim();
   const cost = parseFloat(carCostInput.value);
@@ -81,7 +80,7 @@ addCarBtn.addEventListener("click", (): void => {
     return;
   }
 
-  // Create a new Car object and add to cars array
+  
   const newCar = new Car(model, cost);
   cars.push(newCar);
 
@@ -93,7 +92,7 @@ addCarBtn.addEventListener("click", (): void => {
   renderTable(cars);
 });
 
-// Event listener for calculating the total cost
+
 calculateBtn.addEventListener("click", (): void => {
   const salesManage = new SalesManage("ABC Branch");
   const totalCost = salesManage.calculateTotalCost(cars);

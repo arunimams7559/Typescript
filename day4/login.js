@@ -5,7 +5,7 @@ var usernameInput = document.getElementById("username");
 var passwordInput = document.getElementById("password");
 var errorMessage = document.getElementById("error-message");
 loginForm.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form from refreshing the page
+    event.preventDefault();
     var username = usernameInput.value.trim();
     var password = passwordInput.value.trim();
     if (username === VALID_USERNAME && password === VALID_PASSWORD) {
