@@ -5,17 +5,17 @@ type Question = {
     correctAnswer: string;
 };
 
-// Union type 
+
 type UserInput = string | number;
 
-// Intersection type
+
 type Result = {
     score: number;
 } & {
     userName: string;
 };
 
-// Type guard to check if an object is of type Result
+
 function isResult(obj: any): obj is Result {
     return obj?.score !== undefined && obj?.userName !== undefined;
 }
@@ -39,7 +39,7 @@ const questions: Question[] = [
     },
 ];
 
-// current question and score
+
 let currentQuestionIndex = 0;
 let score = 0;
 
@@ -52,7 +52,7 @@ const resultContainer = document.getElementById("result") as HTMLDivElement;
 const scoreElement = document.getElementById("score") as HTMLParagraphElement;
 const restartButton = document.getElementById("restart-btn") as HTMLButtonElement;
 
-// Function to start the quiz
+
 function startQuiz(): void {
     startButton.classList.add("hidden"); // Hide the start button
     quizContainer.classList.remove("hidden"); // Show the quiz container
