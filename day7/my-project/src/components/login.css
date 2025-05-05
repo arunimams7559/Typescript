@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a; 
+  color: #ffffff; 
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 70px;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  text-align: center;
+  background-color: #2a2a2a; 
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #ff0000; 
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff; 
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #555555; 
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #1a1a1a; 
+  color: #ffffff; 
+}
+
+input::placeholder {
+  color: #888888; 
+}
+
+.error-message {
+  color: #ff0000; 
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #cc0000; 
+}
+
+a {
+  color: red; /* Set the text color to red */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}

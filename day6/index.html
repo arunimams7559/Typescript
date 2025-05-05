@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Playlist Manager</title>
+  <title>Playlist</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <h1>Playlist Manager</h1>
   <div id="app">
-    <h2>Add Item to Playlist</h2>
+    <h2>Add Your Favorite Playlists</h2>
     <form id="addItemForm">
       <input type="text" id="title" placeholder="Title" required />
       <input type="url" id="url" placeholder="Song URL" required />
@@ -28,7 +28,7 @@
     <template id="playlistItemTemplate">
       <li>
         <strong class="title"></strong> <span class="language"></span>
-        <a class="playLink" target="_blank">Play</a>
+      <a class="playLink" target="_blank">Play</a>
         <button class="removeButton">Remove</button>
       </li>
     </template>

@@ -1,0 +1,38 @@
+.welcome-container {
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 400px;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  background-color: #2a2a2a;
+  color: #ffffff; 
+}
+
+h1 {
+  font-size: 28px;
+  color: #ff0000; 
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  color: #cccccc; 
+  margin-bottom: 30px;
+}
+
+.logout-button {
+  padding: 10px 20px;
+  background-color: #ff0000; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #cc0000;
+}

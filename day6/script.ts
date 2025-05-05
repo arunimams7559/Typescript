@@ -30,9 +30,9 @@ class Playlist<T extends PlayableItem> {
   }
 
   
-  sortItems(): void {
-    this.items.sort((a, b) => a.title.localeCompare(b.title));
-  }
+  // sortItems(): void {
+  //   this.items.sort((a, b) => a.title.localeCompare(b.title));
+  // }
 
   // Shuffle items randomly
   shuffleItems(): void {
